@@ -1,0 +1,8 @@
+def twosum(nums, target):
+    storage = {}
+    for i, n in enumerate(nums):
+        n2 = target - n
+        if n2 in storage:
+            return [storage[n2], i]
+        storage[n] = i
+    return None
